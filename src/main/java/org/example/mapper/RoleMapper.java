@@ -1,9 +1,9 @@
-package asia.huayu.auth.mapper;
+package org.example.mapper;
 
-import asia.huayu.auth.entity.ResourceRole;
-import asia.huayu.auth.entity.Role;
+
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Mapper;
+import org.example.entity.ResourceRole;
+import org.example.entity.Role;
 
 import java.util.List;
 
@@ -15,7 +15,6 @@ import java.util.List;
  * @author testjava
  * @since 2020-01-12
  */
-@Mapper
 public interface RoleMapper extends BaseMapper<Role> {
     /**
      * 方法listResourceRoles作用为：
@@ -28,5 +27,4 @@ public interface RoleMapper extends BaseMapper<Role> {
      */
     List<ResourceRole> listResourceRoles();
 
-    List<String> getRoleListByID(List<String> roleIdList);
 }

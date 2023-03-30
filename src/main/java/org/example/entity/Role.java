@@ -1,4 +1,4 @@
-package asia.huayu.auth.entity;
+package org.example.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.*;

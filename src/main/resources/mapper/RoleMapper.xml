@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="asia.huayu.auth.mapper.RoleMapper">
-    <resultMap id="resourceRoleResultMap" type="asia.huayu.auth.entity.ResourceRole">
+<mapper namespace="org.example.mapper.RoleMapper">
+    <resultMap id="resourceRoleResultMap" type="org.example.entity.ResourceRole">
         <id property="id" column="id"/>
         <result property="url" column="url"/>
         <result property="requestMethod" column="request_method"/>
@@ -21,15 +21,5 @@
                  left join role ro on rr.role_id = ro.id
         where re.parent_id is not null
           and is_anonymous = 0;
-    </select>
-    <select id="getRoleListByID" resultType="java.lang.String">
-        select role_name
-        from role
-        where id in
-        <foreach item="item" index="index" collection="roleIdList"
-                 open="(" separator="," close=")">
-            #{item}
-        </foreach>
-        ;
     </select>
 </mapper>

@@ -14,7 +14,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  */
 
 @SpringBootApplication
-@MapperScans({@MapperScan("asia.huayu.mapper")})
+@MapperScans({@MapperScan("org.example.mapper")})
 public class AuroraSpringbootApplication extends SpringBootServletInitializer implements CommandLineRunner {
     public static void main(String[] args) {
         SpringApplication.run(AuroraSpringbootApplication.class, args);
